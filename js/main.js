@@ -24,12 +24,13 @@
     });
   });
 
-  // Home page: header sits transparent over the hero until you scroll or open the menu.
+  // Header starts tall and see-through, then shrinks into a solid banner once you scroll
+  // (or open the mobile menu). The animation itself is CSS transitions on .is-scrolled.
   var header = document.querySelector('.site-header');
-  if (header && document.querySelector('.hero')) {
+  if (header) {
     var updateHeader = function () {
       var menuOpen = nav && nav.classList.contains('is-open');
-      header.classList.toggle('is-transparent', window.scrollY < 40 && !menuOpen);
+      header.classList.toggle('is-scrolled', window.scrollY > 24 || menuOpen);
     };
     updateHeader();
     window.addEventListener('scroll', updateHeader, { passive: true });

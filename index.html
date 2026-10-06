@@ -7,7 +7,14 @@
   <meta name="description" content="Game design portfolio of Callum Schultz, a game design graduate from Vega School, Cape Town.">
   <link rel="stylesheet" href="css/style.css">
 </head>
-<body>
+<body class="has-hero">
+  <div class="page-bg" aria-hidden="true">
+    <!-- PLACEHOLDER image: overwrite the file with real key art (same name). It is shown darkened behind the text. -->
+    <img src="assets/img/hero-1920.webp" srcset="assets/img/hero-1280.webp 1280w, assets/img/hero-1920.webp 1920w"
+         sizes="100vw" width="1920" height="1080" alt="" fetchpriority="high">
+    <div class="hero__watermark">Home – Home – Home – Home – Home</div>
+    <div class="hero__hatch"></div>
+  </div>
   <a class="skip-link" href="#main">Skip to content</a>
 
   <header class="site-header">
@@ -44,13 +51,6 @@
   <main id="main">
     <!-- HERO: full-screen intro – name, role, work + résumé buttons -->
     <section class="hero" aria-label="Introduction">
-      <div class="hero__media">
-        <!-- PLACEHOLDER image: overwrite the file with real key art (same name). It is shown darkened behind the text. -->
-        <img src="assets/img/hero-1920.webp" srcset="assets/img/hero-1280.webp 1280w, assets/img/hero-1920.webp 1920w"
-             sizes="100vw" width="1920" height="1080" alt="" fetchpriority="high">
-      </div>
-      <div class="hero__watermark" aria-hidden="true">Home – Home – Home – Home – Home</div>
-      <div class="hero__hatch" aria-hidden="true"></div>
 
       <div class="hero__content">
         <svg class="hero__mark" viewBox="6 14 228 142" aria-hidden="true" focusable="false">
