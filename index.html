@@ -1,0 +1,126 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>[YOUR NAME] – Junior Game Designer</title>
+  <meta name="description" content="Game design portfolio of [YOUR NAME], a game design graduate from Vega School, Cape Town.">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="site-header">
+    <div class="container">
+      <a class="logo" href="index.html">[YOUR NAME]<span>.</span></a>
+      <button class="nav-toggle" aria-expanded="false" aria-controls="site-nav">Menu</button>
+      <nav id="site-nav" class="site-nav" aria-label="Main">
+        <ul>
+          <li><a href="index.html#work" aria-current="page">Work</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="contact.html">Contact</a></li>
+          <li class="nav-cta"><a href="assets/resume/resume.pdf" download>Résumé</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+    <!-- HERO: name, role headline, short intro, showreel/hero visual, résumé button -->
+    <section class="hero">
+      <div class="hero__media">
+        <!-- TODO: replace with a full-bleed WebP key art, e.g.
+             <img src="assets/img/hero-1920.webp" srcset="assets/img/hero-1280.webp 1280w, assets/img/hero-1920.webp 1920w"
+                  sizes="100vw" alt="" fetchpriority="high"> -->
+        <div class="placeholder">Hero key art / showreel still (1920×1080 WebP)</div>
+      </div>
+      <div class="container">
+        <span class="eyebrow">Game Designer · Cape Town</span>
+        <h1>[YOUR NAME]</h1>
+        <p class="hero__role">Junior <span class="todo">[Specialty]</span> Designer</p>
+        <p class="hero__intro"><span class="todo">TODO: one or two sentences on what kind of designer you are and what you love building.</span></p>
+        <div class="btn-row">
+          <a class="btn" href="#work">View my work</a>
+          <a class="btn btn--ghost" href="assets/resume/resume.pdf" download>Download résumé</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- SHOWREEL -->
+    <section class="section" id="showreel">
+      <div class="container">
+        <span class="eyebrow">Showreel</span>
+        <h2>Design reel</h2>
+        <div class="video-embed">
+          <!-- TODO: paste the YouTube/Vimeo embed, e.g.
+               <iframe src="https://www.youtube-nocookie.com/embed/VIDEO_ID" title="[YOUR NAME] design showreel"
+                       loading="lazy" allow="accelerometer; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> -->
+          <div class="placeholder" style="border:0;border-radius:0;height:100%">YouTube / Vimeo showreel embed</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FEATURED PROJECTS -->
+    <section class="section" id="work">
+      <div class="container">
+        <span class="eyebrow">Selected work</span>
+        <h2>Projects</h2>
+
+        <div class="filters" role="group" aria-label="Filter projects">
+          <button class="filter-btn" data-filter="all" aria-pressed="true">All</button>
+          <button class="filter-btn" data-filter="released" aria-pressed="false">Released</button>
+          <button class="filter-btn" data-filter="school" aria-pressed="false">School</button>
+        </div>
+
+        <div class="project-grid">
+          <a class="project-card" href="projects/project-1.html" data-category="school">
+            <div class="placeholder">Project 1 thumbnail (16:9 WebP)</div>
+            <div class="project-card__body">
+              <span class="tag tag--school">School</span><span class="tag tag--role">[Role]</span>
+              <h3>[Project 1 title]</h3>
+              <p>[One-line hook for the game.]</p>
+            </div>
+          </a>
+          <a class="project-card" href="projects/project-2.html" data-category="school">
+            <div class="placeholder">Project 2 thumbnail (16:9 WebP)</div>
+            <div class="project-card__body">
+              <span class="tag tag--school">School</span><span class="tag tag--role">[Role]</span>
+              <h3>[Project 2 title]</h3>
+              <p>[One-line hook for the game.]</p>
+            </div>
+          </a>
+          <a class="project-card" href="projects/project-3.html" data-category="released">
+            <div class="placeholder">Project 3 thumbnail (16:9 WebP)</div>
+            <div class="project-card__body">
+              <span class="tag tag--released">Released</span><span class="tag tag--role">[Role]</span>
+              <h3>[Project 3 title]</h3>
+              <p>[One-line hook for the game.]</p>
+            </div>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <span class="eyebrow">Let's talk</span>
+        <h2>Looking for a junior designer?</h2>
+        <p class="muted" style="max-width:60ch">I'm open to junior and graduate roles from <span class="todo">[month, year]</span>.</p>
+        <div class="btn-row">
+          <a class="btn" href="contact.html">Get in touch</a>
+          <a class="btn btn--ghost" href="about.html">About me</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <span>© <span id="year">2026</span> [YOUR NAME]</span>
+      <span><a href="mailto:you@example.com">you@example.com</a> · <a href="#">LinkedIn</a> · <a href="#">itch.io</a></span>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
