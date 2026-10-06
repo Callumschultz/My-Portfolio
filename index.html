@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Callum Schultz – Junior Level Designer</title>
   <meta name="description" content="Game design portfolio of Callum Schultz, a game design graduate from Vega School, Cape Town.">
+  <script>document.documentElement.classList.add('js')</script>
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body class="has-hero">
@@ -12,7 +13,7 @@
     <!-- PLACEHOLDER image: overwrite the file with real key art (same name). It is shown darkened behind the text. -->
     <img src="assets/img/hero-1920.webp" srcset="assets/img/hero-1280.webp 1280w, assets/img/hero-1920.webp 1920w"
          sizes="100vw" width="1920" height="1080" alt="" fetchpriority="high">
-    <div class="hero__watermark">Home – Home – Home – Home – Home</div>
+    <div class="hero__watermark"><span>Home – Home – Home – Home – Home – Home – Home – Home – Home – Home – Home – Home – Home – Home – Home – Home</span></div>
     <div class="hero__hatch"></div>
   </div>
   <a class="skip-link" href="#main">Skip to content</a>
@@ -21,12 +22,12 @@
     <div class="header-inner">
       <a class="brand" href="index.html" aria-label="Callum Schultz – home">
         <svg class="brand__mark" viewBox="6 14 228 142" aria-hidden="true" focusable="false">
-          <path d="M84 96V78H12v72h72v-18M84 96h36M84 132h36" fill="none" stroke="#fff" stroke-width="8" stroke-linejoin="miter"/>
-          <path d="M120 96V20h108v130H120v-18" fill="none" stroke="var(--accent)" stroke-width="8" stroke-linejoin="miter"/>
-          <path d="M60 114h56v-18h56" fill="none" stroke="#fff" stroke-width="3" stroke-dasharray="6 6" opacity=".7"/>
-          <circle cx="44" cy="114" r="11" fill="#fff"/>
-          <path d="M184 72l14 14-14 14-14-14z" fill="var(--accent)"/>
-          <rect x="150" y="112" width="22" height="22" fill="var(--accent)" opacity=".45"/>
+          <path class="mark-wall" pathLength="1" d="M84 96V78H12v72h72v-18M84 96h36M84 132h36" fill="none" stroke="#fff" stroke-width="8" stroke-linejoin="miter"/>
+          <path class="mark-wall mark-wall--b" pathLength="1" d="M120 96V20h108v130H120v-18" fill="none" stroke="var(--accent)" stroke-width="8" stroke-linejoin="miter"/>
+          <path class="mark-route" d="M60 114h56v-18h56" fill="none" stroke="#fff" stroke-width="3" stroke-dasharray="6 6" opacity=".7"/>
+          <circle class="mark-player" cx="44" cy="114" r="11" fill="#fff"/>
+          <path class="mark-goal" d="M184 72l14 14-14 14-14-14z" fill="var(--accent)"/>
+          <rect class="mark-cover" x="150" y="112" width="22" height="22" fill="var(--accent)" opacity=".45"/>
         </svg>
         <span class="brand__name"><span>Callum</span><span>Schultz</span></span>
       </a>
@@ -54,14 +55,14 @@
 
       <div class="hero__content">
         <svg class="hero__mark" viewBox="6 14 228 142" aria-hidden="true" focusable="false">
-          <path d="M84 96V78H12v72h72v-18M84 96h36M84 132h36" fill="none" stroke="#fff" stroke-width="8" stroke-linejoin="miter"/>
-          <path d="M120 96V20h108v130H120v-18" fill="none" stroke="var(--accent)" stroke-width="8" stroke-linejoin="miter"/>
-          <path d="M60 114h56v-18h56" fill="none" stroke="#fff" stroke-width="3" stroke-dasharray="6 6" opacity=".7"/>
-          <circle cx="44" cy="114" r="11" fill="#fff"/>
-          <path d="M184 72l14 14-14 14-14-14z" fill="var(--accent)"/>
-          <rect x="150" y="112" width="22" height="22" fill="var(--accent)" opacity=".45"/>
+          <path class="mark-wall" pathLength="1" d="M84 96V78H12v72h72v-18M84 96h36M84 132h36" fill="none" stroke="#fff" stroke-width="8" stroke-linejoin="miter"/>
+          <path class="mark-wall mark-wall--b" pathLength="1" d="M120 96V20h108v130H120v-18" fill="none" stroke="var(--accent)" stroke-width="8" stroke-linejoin="miter"/>
+          <path class="mark-route" d="M60 114h56v-18h56" fill="none" stroke="#fff" stroke-width="3" stroke-dasharray="6 6" opacity=".7"/>
+          <circle class="mark-player" cx="44" cy="114" r="11" fill="#fff"/>
+          <path class="mark-goal" d="M184 72l14 14-14 14-14-14z" fill="var(--accent)"/>
+          <rect class="mark-cover" x="150" y="112" width="22" height="22" fill="var(--accent)" opacity=".45"/>
         </svg>
-        <h1 class="hero__name">Callum <span class="accent">Schultz</span></h1>
+        <h1 class="hero__name"><span class="word">Callum</span> <span class="word accent">Schultz</span></h1>
         <p class="hero__role"><span class="sr-only">Junior Level Designer</span><span class="typewriter" data-typewriter aria-hidden="true">Junior Level Designer</span></p>
         <div class="btn-row btn-row--center">
           <a class="pill pill--lg" href="#work"><span>My work</span><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M3 3h8v8H3zm10 0h8v8h-8zM3 13h8v8H3zm10 0h8v8h-8z"/></svg></a>
