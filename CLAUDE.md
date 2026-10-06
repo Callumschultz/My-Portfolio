@@ -4,6 +4,7 @@
 Custom-coded portfolio website for **Callum Schultz**, a final-year game design student at Vega School at Emeris (Cape Town). It's assessed as Part 3 of the Portfolio of Evidence (100 marks) and will be shown at the end-of-year Vega Showcase.
 
 - **Specialty / target role:** Level designer (headline: "Junior Level Designer")
+- **Degree:** IIE Bachelor of Computer and Information Sciences in Game Design and Development, Emeris, 2024–2026
 - **Platform:** Custom-coded (HTML/CSS/JS). Approved by the lecturer.
 - **Hosting:** Netlify or GitHub Pages (free).
 - **Domain:** A bespoke custom domain is REQUIRED by the brief (e.g. yourname.com).
@@ -62,7 +63,7 @@ Also: select 2–3 projects that suit the target role, and refine older work so 
 
 ## Still To Provide
 - [ ] Projects (2–3) with images, videos, builds and write-ups
-  - Project 1: Garden Growers – https://kaellum.itch.io/garden-growers (link + QR done; write-up, poster, process, video still needed)
+  - Project 1: Garden Growers – https://kaellum.itch.io/garden-growers (hosted on a teammate's itch.io account; Callum's own account stays the contact link. Link + QR done; write-up, poster, process, video still needed)
 - [ ] Appendix B (Showcase online profile requirements)
 - [ ] Marking rubric
 - [x] Name, specialty, contact details
