@@ -1,12 +1,18 @@
 # Game Design Portfolio Website – Project Brief
 
 ## Overview
-Custom-coded portfolio website for **[YOUR NAME]**, a final-year game design student at Vega School at Emeris (Cape Town). It's assessed as Part 3 of the Portfolio of Evidence (100 marks) and will be shown at the end-of-year Vega Showcase.
+Custom-coded portfolio website for **Callum Schultz**, a final-year game design student at Vega School at Emeris (Cape Town). It's assessed as Part 3 of the Portfolio of Evidence (100 marks) and will be shown at the end-of-year Vega Showcase.
 
-- **Specialty / target role:** [TO CONFIRM – e.g. level / systems / narrative / gameplay designer]
+- **Specialty / target role:** Level designer (headline: "Junior Level Designer")
 - **Platform:** Custom-coded (HTML/CSS/JS). Approved by the lecturer.
 - **Hosting:** Netlify or GitHub Pages (free).
 - **Domain:** A bespoke custom domain is REQUIRED by the brief (e.g. yourname.com).
+
+## Contact Details
+- Email: callumaschultzz@gmail.com
+- LinkedIn: https://www.linkedin.com/in/callum-schultz-7b737137b/
+- itch.io: https://callum-schultz.itch.io/
+- GitHub: https://github.com/Callumschultz
 
 ## Design Direction
 Inspired by these portfolios:
@@ -58,7 +64,8 @@ Also: select 2–3 projects that suit the target role, and refine older work so 
 - [ ] Projects (2–3) with images, videos, builds and write-ups
 - [ ] Appendix B (Showcase online profile requirements)
 - [ ] Marking rubric
-- [ ] Name, specialty, contact details, résumé PDF
+- [x] Name, specialty, contact details
+- [ ] Résumé PDF
 - [ ] Chosen domain name
 
 ## Working Notes
