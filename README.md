@@ -13,6 +13,7 @@ css/style.css         All styles (colour tokens at the top)
 js/main.js            Mobile nav + project filter
 assets/img/           WebP images, one folder per project (assets/img/project-1/…)
 assets/resume/        resume.pdf
+assets/fonts/         Oswald (self-hosted so headings work offline; OFL licence included)
 ```
 
 ## Filling it in
