@@ -62,11 +62,13 @@ Also: select 2–3 projects that suit the target role, and refine older work so 
 
 ## Still To Provide
 - [ ] Projects (2–3) with images, videos, builds and write-ups
+  - Project 1: Garden Growers – https://kaellum.itch.io/garden-growers (link + QR done; write-up, poster, process, video still needed)
 - [ ] Appendix B (Showcase online profile requirements)
 - [ ] Marking rubric
 - [x] Name, specialty, contact details
-- [ ] Résumé PDF
-- [ ] Chosen domain name
+- [ ] Résumé PDF (none yet – all résumé links are commented out in the HTML; restore them once assets/resume/resume.pdf exists)
+- [ ] Chosen domain name (coming later)
+- [x] Bio (on About page; short version in home hero)
 
 ## Working Notes
 - This is an individually assessed project. Project write-ups should come from my own drafts; edit for clarity, spelling and grammar rather than rewriting my content.
