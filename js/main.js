@@ -12,17 +12,21 @@
 
   var filterButtons = document.querySelectorAll('.filter-btn');
   var cards = document.querySelectorAll('.project-card[data-category]');
-  filterButtons.forEach(function (btn) {
-    btn.addEventListener('click', function () {
-      var filter = btn.getAttribute('data-filter');
-      filterButtons.forEach(function (b) {
-        b.setAttribute('aria-pressed', String(b === btn));
-      });
-      cards.forEach(function (card) {
-        card.hidden = filter !== 'all' && card.getAttribute('data-category') !== filter;
-      });
+  var applyFilter = function (btn) {
+    var filter = btn.getAttribute('data-filter');
+    filterButtons.forEach(function (b) {
+      b.setAttribute('aria-pressed', String(b === btn));
     });
+    cards.forEach(function (card) {
+      card.hidden = card.getAttribute('data-category') !== filter;
+    });
+  };
+  filterButtons.forEach(function (btn) {
+    btn.addEventListener('click', function () { applyFilter(btn); });
   });
+  // Start on whichever category is marked aria-pressed="true" in the HTML (School).
+  var startFilter = document.querySelector('.filter-btn[aria-pressed="true"]');
+  if (startFilter) applyFilter(startFilter);
 
   // Header starts tall and see-through, then shrinks into a solid banner once you scroll
   // (or open the mobile menu). The animation itself is CSS transitions on .is-scrolled.
