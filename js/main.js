@@ -60,7 +60,7 @@
   var REVEAL = [
     '.section .eyebrow', '.section h1', '.section h2', '.prose > p', '.prose > ul', '.btn-row',
     '.project-card', '.filters', '.video-embed', '.link-card', '.chip-list li', '.skill-columns > div h3',
-    '.process-grid figure', '.timeline li', '.contact-list li', '.facts > div', '.case-block > h2',
+    '.process-grid figure', '.timeline li', '.social-cards li', '.contact__status', '.facts > div', '.case-block > h2',
     '.gallery__main', '.gallery__thumb',
     '.portrait', '.poster', '.project-hero .tag', '.project-nav .btn'
   ].join(',');
@@ -213,6 +213,32 @@
     });
     mainButton.addEventListener('click', function () {
       if (typeof HTMLDialogElement === 'function' && shots.length) openLightbox(shots, current);
+    });
+  });
+
+  // "Copy email address" button: copies, then confirms for a moment.
+  Array.prototype.forEach.call(document.querySelectorAll('[data-copy]'), function (btn) {
+    var label = btn.querySelector('[data-copy-label]') || btn;
+    var original = label.textContent;
+    var done = function (ok) {
+      label.textContent = ok ? 'Copied!' : btn.getAttribute('data-copy');
+      btn.classList.toggle('is-copied', ok);
+      setTimeout(function () { label.textContent = original; btn.classList.remove('is-copied'); }, 2000);
+    };
+    btn.addEventListener('click', function () {
+      var text = btn.getAttribute('data-copy');
+      if (navigator.clipboard && window.isSecureContext) {
+        navigator.clipboard.writeText(text).then(function () { done(true); }, function () { done(false); });
+        return;
+      }
+      // Fallback for pages opened straight from a file (e.g. the Showcase computer).
+      var area = document.createElement('textarea');
+      area.value = text; area.setAttribute('readonly', ''); area.style.position = 'fixed'; area.style.opacity = '0';
+      document.body.appendChild(area); area.select();
+      var ok = false;
+      try { ok = document.execCommand('copy'); } catch (err) { ok = false; }
+      document.body.removeChild(area);
+      done(ok);
     });
   });
 
