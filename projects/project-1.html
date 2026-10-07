@@ -50,7 +50,7 @@
     d. My role and contribution                          → #role
     e. Technologies / software / languages / engines     → #tools
     f. Process work                                      → #process
-    g. Demo video URL / QR                               → #links
+    g. Demo video URL / QR                               → #links (screenshot gallery for now – no video yet)
     h. Download URL / QR                                 → #links
   -->
 
@@ -79,7 +79,7 @@
           </dl>
 
           <div class="btn-row" style="margin-top:28px">
-            <a class="btn" href="#links">Watch &amp; play</a>
+            <a class="btn" href="#links">See it in action</a>
           </div>
         </div>
       </div>
@@ -150,27 +150,35 @@
       </div>
     </section>
 
-    <!-- (g) Demo video + (h) Download -->
+    <!-- (g) Screenshots (no demo video yet) + (h) Download -->
     <section class="section" id="links">
       <div class="container">
         <span class="eyebrow">See it in action</span>
-        <h2>Watch &amp; play</h2>
-        <div class="video-embed" style="margin-bottom:32px">
-          <!-- TODO: <iframe src="https://www.youtube-nocookie.com/embed/VIDEO_ID" title="Garden Growers gameplay demo"
-                       loading="lazy" allow="accelerometer; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> -->
-          <img src="../assets/img/project-1/video.webp" width="1280" height="720" alt="Demo video coming soon" loading="lazy">
-        </div>
-        <div class="link-cards">
-          <div class="link-card">
-            <div class="qr">
-              <!-- <img src="../assets/img/project-1/qr-video.png" width="120" height="120" alt="QR code to demo video"> -->
-              <div class="placeholder placeholder--square">QR: video</div>
-            </div>
-            <div>
-              <h3>Demo video</h3>
-              <p><a href="https://youtu.be/VIDEO_ID" rel="noopener">youtu.be/VIDEO_ID</a></p>
-            </div>
+        <h2>Screenshots &amp; play</h2>
+
+        <!--
+          SCREENSHOT GALLERY
+          • Add a screenshot: save it as ../assets/img/project-1/shot-5.webp (1600×900), then copy one
+            <button class="gallery__thumb"> line below and change the file name and alt text.
+          • Remove one: delete its line. The first thumbnail is what shows in the big frame on load.
+          • Demo video later: put this above the gallery –
+            <div class="video-embed"><iframe src="https://www.youtube-nocookie.com/embed/VIDEO_ID" title="Garden Growers gameplay demo"
+                 loading="lazy" allow="accelerometer; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
+        -->
+        <div class="gallery" data-gallery>
+          <button class="gallery__main" type="button" aria-label="View screenshot full size">
+            <img src="../assets/img/project-1/shot-1.webp" width="1600" height="900" alt="[Describe screenshot 1]" loading="lazy">
+            <span class="gallery__hint" aria-hidden="true">Click to enlarge</span>
+          </button>
+          <div class="gallery__thumbs" role="group" aria-label="Screenshots">
+            <button class="gallery__thumb" type="button" aria-pressed="true"><img src="../assets/img/project-1/shot-1.webp" width="1600" height="900" alt="[Describe screenshot 1]" loading="lazy"></button>
+            <button class="gallery__thumb" type="button" aria-pressed="false"><img src="../assets/img/project-1/shot-2.webp" width="1600" height="900" alt="[Describe screenshot 2]" loading="lazy"></button>
+            <button class="gallery__thumb" type="button" aria-pressed="false"><img src="../assets/img/project-1/shot-3.webp" width="1600" height="900" alt="[Describe screenshot 3]" loading="lazy"></button>
+            <button class="gallery__thumb" type="button" aria-pressed="false"><img src="../assets/img/project-1/shot-4.webp" width="1600" height="900" alt="[Describe screenshot 4]" loading="lazy"></button>
           </div>
+        </div>
+
+        <div class="link-cards">
           <div class="link-card">
             <div class="qr">
               <img src="../assets/img/project-1/qr-download.svg" width="120" height="120" alt="QR code linking to Garden Growers on itch.io">

@@ -57,6 +57,7 @@
     '.section .eyebrow', '.section h1', '.section h2', '.prose > p', '.prose > ul', '.btn-row',
     '.project-card', '.filters', '.video-embed', '.link-card', '.chip-list li', '.skill-columns > div h3',
     '.process-grid figure', '.timeline li', '.contact-list li', '.facts > div', '.case-block > h2',
+    '.gallery__main', '.gallery__thumb',
     '.portrait', '.poster', '.project-hero .tag', '.project-nav .btn'
   ].join(',');
   var revealEls = reduceMotion || !('IntersectionObserver' in window) ? [] :
@@ -119,6 +120,97 @@
     // Coming back with the browser's Back button can restore the faded-out page; undo that.
     window.addEventListener('pageshow', function () { document.body.classList.remove('is-leaving'); });
   }
+
+  // Screenshot galleries: thumbnails swap the big image; the big image opens a full-screen viewer.
+  var swapImage = function (img, src, alt) {
+    // Compare against any swap still in flight so fast clicks always end on the last one chosen.
+    if ((img.dataset.pending || img.getAttribute('src')) === src) return;
+    img.dataset.pending = src;
+    img.classList.add('is-swapping');
+    setTimeout(function () {
+      if (img.dataset.pending !== src) return;
+      delete img.dataset.pending;
+      img.onload = function () { img.classList.remove('is-swapping'); };
+      img.src = src;
+      img.alt = alt;
+      if (img.complete) img.classList.remove('is-swapping');
+    }, reduceMotion ? 0 : 180);
+  };
+
+  var lightbox = null;
+  var openLightbox = function (shots, start) {
+    if (!lightbox) {
+      lightbox = document.createElement('dialog');
+      lightbox.className = 'lightbox';
+      lightbox.setAttribute('aria-label', 'Screenshot viewer');
+      lightbox.innerHTML =
+        '<img class="lightbox__img" alt="">' +
+        '<button class="icon-btn lightbox__btn lightbox__close" type="button" aria-label="Close">' +
+          '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 6l12 12M18 6 6 18" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"/></svg></button>' +
+        '<button class="icon-btn lightbox__btn lightbox__prev" type="button" aria-label="Previous screenshot">' +
+          '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M15 5l-7 7 7 7" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg></button>' +
+        '<button class="icon-btn lightbox__btn lightbox__next" type="button" aria-label="Next screenshot">' +
+          '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 5l7 7-7 7" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg></button>' +
+        '<span class="lightbox__count" aria-live="polite"></span>';
+      document.body.appendChild(lightbox);
+      lightbox.querySelector('.lightbox__close').addEventListener('click', function () { lightbox.close(); });
+      lightbox.querySelector('.lightbox__prev').addEventListener('click', function () { lightbox.step(-1); });
+      lightbox.querySelector('.lightbox__next').addEventListener('click', function () { lightbox.step(1); });
+      // Clicking the dark area around the image closes it.
+      lightbox.addEventListener('click', function (e) { if (e.target === lightbox) lightbox.close(); });
+      lightbox.addEventListener('keydown', function (e) {
+        if (e.key === 'ArrowLeft') lightbox.step(-1);
+        if (e.key === 'ArrowRight') lightbox.step(1);
+      });
+      // Swipe left/right on touch screens.
+      var touchX = null;
+      lightbox.addEventListener('touchstart', function (e) { touchX = e.touches[0].clientX; }, { passive: true });
+      lightbox.addEventListener('touchend', function (e) {
+        if (touchX === null) return;
+        var dx = e.changedTouches[0].clientX - touchX;
+        if (Math.abs(dx) > 40) lightbox.step(dx < 0 ? 1 : -1);
+        touchX = null;
+      });
+    }
+    var img = lightbox.querySelector('.lightbox__img');
+    var count = lightbox.querySelector('.lightbox__count');
+    var index = start;
+    var show = function () {
+      var shot = shots[index];
+      swapImage(img, shot.src, shot.alt);
+      count.textContent = (index + 1) + ' / ' + shots.length;
+    };
+    lightbox.step = function (dir) { index = (index + dir + shots.length) % shots.length; show(); };
+    var single = shots.length < 2;
+    lightbox.querySelector('.lightbox__prev').hidden = single;
+    lightbox.querySelector('.lightbox__next').hidden = single;
+    img.src = shots[index].src;
+    img.alt = shots[index].alt;
+    count.textContent = (index + 1) + ' / ' + shots.length;
+    lightbox.showModal();
+  };
+
+  Array.prototype.forEach.call(document.querySelectorAll('[data-gallery]'), function (gallery) {
+    var mainButton = gallery.querySelector('.gallery__main');
+    var mainImg = mainButton.querySelector('img');
+    var thumbs = Array.prototype.slice.call(gallery.querySelectorAll('.gallery__thumb'));
+    var current = 0;
+    var shots = thumbs.map(function (t) {
+      var img = t.querySelector('img');
+      return { src: img.getAttribute('src'), alt: img.getAttribute('alt') };
+    });
+    thumbs.forEach(function (thumb, i) {
+      thumb.setAttribute('aria-label', 'Show screenshot ' + (i + 1));
+      thumb.addEventListener('click', function () {
+        current = i;
+        thumbs.forEach(function (t, j) { t.setAttribute('aria-pressed', String(j === i)); });
+        swapImage(mainImg, shots[i].src, shots[i].alt);
+      });
+    });
+    mainButton.addEventListener('click', function () {
+      if (typeof HTMLDialogElement === 'function' && shots.length) openLightbox(shots, current);
+    });
+  });
 
   var year = document.getElementById('year');
   if (year) year.textContent = new Date().getFullYear();
