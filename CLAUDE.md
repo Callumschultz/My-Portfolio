@@ -72,7 +72,7 @@ Also: select 2–3 projects that suit the target role, and refine older work so 
 - [ ] Appendix B (Showcase online profile requirements)
 - [ ] Marking rubric
 - [x] Name, specialty, contact details
-- [ ] Résumé PDF (none yet – all résumé links are commented out in the HTML; restore them once assets/resume/resume.pdf exists)
+- [x] Résumé PDF (assets/resume/resume.pdf; downloads as Callum-Schultz-Resume.pdf; buttons in header, home hero and About)
 - [ ] Chosen domain name (coming later)
 - [x] Bio (on About page; short version in home hero)
 - [x] Design reel: https://youtu.be/tSjWyc_RSl4 (click-to-play on home page)
