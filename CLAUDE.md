@@ -6,7 +6,7 @@ Custom-coded portfolio website for **Callum Schultz**, a final-year game design 
 - **Specialty / target role:** Level designer (headline: "Junior Level Designer")
 - **Degree:** IIE Bachelor of Computer and Information Sciences in Game Design and Development, Emeris, 2024–2026
 - **Platform:** Custom-coded (HTML/CSS/JS). Approved by the lecturer.
-- **Hosting:** Netlify or GitHub Pages (free).
+- **Hosting:** GitHub Pages, deployed from the `main` branch (root).
 - **Domain:** A bespoke custom domain is REQUIRED by the brief (e.g. yourname.com).
 
 ## Contact Details
@@ -73,7 +73,7 @@ Also: select 2–3 projects that suit the target role, and refine older work so 
 - [ ] Marking rubric
 - [x] Name, specialty, contact details
 - [x] Résumé PDF (assets/resume/resume.pdf; downloads as Callum-Schultz-Resume.pdf; buttons in header, home hero and About)
-- [ ] Chosen domain name (coming later)
+- [x] Domain: callumaschultz.com (with an 'a'; registered on Cloudflare, DNS-only records → GitHub Pages from main). Live URL: https://callumaschultz.com
 - [x] Bio (on About page; short version in home hero)
 - [x] Design reel: https://youtu.be/tSjWyc_RSl4 (click-to-play on home page)
 - [x] Visual identity: green accent (#4ade80), no logo mark (name only), greyscale blurred Garden Growers background. Achievement: Ludum Dare 57 – top 50 for Art Style (on About timeline)
