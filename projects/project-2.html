@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Mariana's Secret – Callum Schultz</title>
-  <meta name="description" content="Mariana's Secret: [one-line synopsis]. Case study by Callum Schultz.">
+  <meta name="description" content="Mariana's Secret: a 72-hour Ludum Dare 57 game in Unity. 2D art and level design by Callum Schultz.">
   <script>document.documentElement.classList.add('js')</script>
   <link rel="stylesheet" href="../css/style.css">
 </head>
@@ -59,23 +59,22 @@
       <div class="container project-hero__grid">
         <!-- (a) Poster -->
         <div id="poster">
-          <!-- PLACEHOLDER image: overwrite the file with the real one (same name), then update the alt text. -->
-          <img class="poster" src="../assets/img/project-2/poster.webp" width="800" height="1200"
-               alt="Mariana's Secret poster, credits: [names]">
+          <img class="poster" src="../assets/img/project-2/poster.webp" width="1024" height="1836"
+               alt="Mariana's Secret poster: a sunken shipwreck and ruins above a glowing lava cave. A game by Callum Schultz, Sarah Upton, Rebecca Lockhart, Tristan and Nick.">
         </div>
 
         <div>
           <span class="tag tag--school">School project</span>
           <h1>Mariana's Secret</h1>
           <!-- (b) Synopsis -->
-          <p id="synopsis" class="hero__intro"><span class="todo">TODO: short synopsis of the game (2–3 sentences).</span></p>
+          <p id="synopsis" class="hero__intro">You play as a submarine trying to save a diver at the bottom of the ocean. Try to avoid all the critters and enemies while managing your submarine’s light charge.</p>
+          <p class="credits"><span>A game by</span> Callum Schultz, Sarah Upton, Rebecca Lockhart, Tristan and Nick</p>
 
           <dl class="facts">
-            <div><dt>My role</dt><dd>[e.g. Level Designer]</dd></div>
-            <div><dt>Team size</dt><dd>[n people]</dd></div>
-            <div><dt>Duration</dt><dd>[n weeks]</dd></div>
-            <div><dt>Engine</dt><dd>[Unity / Unreal]</dd></div>
-            <div><dt>Platform</dt><dd>[PC]</dd></div>
+            <div><dt>My role</dt><dd>2D Artist &amp; Level Designer</dd></div>
+            <div><dt>Team size</dt><dd>5 people</dd></div>
+            <div><dt>Duration</dt><dd>72 hours (game jam)</dd></div>
+            <div><dt>Engine</dt><dd>Unity</dd></div>
           </dl>
 
           <div class="btn-row" style="margin-top:28px">
@@ -90,7 +89,7 @@
       <div class="container case-block">
         <h2>The brief</h2>
         <div class="prose">
-          <p><span class="todo">TODO: what the assignment asked for – constraints, theme, deliverables, timeframe.</span></p>
+          <p>Mariana’s Secret was developed in about 72 hours during the Ludum Dare 57 game jam. The theme was “Depths”.</p>
         </div>
       </div>
     </section>
@@ -100,11 +99,13 @@
       <div class="container case-block">
         <h2>My role &amp; contribution</h2>
         <div class="prose">
-          <p><span class="todo">TODO: your role on the team.</span></p>
+          <p>I was tasked with creating the environmental assets, the UI panels and a few of the creatures in the game.</p>
           <ul>
-            <li>[Specific thing you designed/built – problem → decision → outcome]</li>
-            <li>[Specific thing you designed/built]</li>
-            <li>[Specific thing you designed/built]</li>
+            <li>Creating the tile map.</li>
+            <li>Creating the geysers that push the player.</li>
+            <li>Creating the sea mines that damage the player.</li>
+            <li>Creating all the other environmental assets, which are purely there for aesthetics.</li>
+            <li>Creating all of the UI panels.</li>
           </ul>
         </div>
       </div>
@@ -115,10 +116,10 @@
       <div class="container case-block">
         <h2>Tools &amp; tech</h2>
         <ul class="chip-list">
-          <li>[Engine]</li>
-          <li>[Language]</li>
-          <li>[Software]</li>
-          <li>[Software]</li>
+          <li>Unity</li>
+          <li>C#</li>
+          <li>Aseprite</li>
+          <li>Visual Studio</li>
         </ul>
       </div>
     </section>
@@ -130,21 +131,12 @@
         <h2>From sketch to build</h2>
         <div class="process-grid">
           <figure>
-            <!-- PLACEHOLDER image: overwrite the file with the real one (same name), then update the alt text. -->
-            <img src="../assets/img/project-2/process-1.webp" width="1200" height="675" alt="[Describe: sketch / paper map]" loading="lazy">
-            <figcaption>[What this shows and what you learned.]</figcaption>
+            <button class="process-zoom" type="button" aria-label="View larger: Pixel-art tile map for the cave walls, annotated with corners, roof, floor, left and right walls, tight spaces and solid in-between blocks"><img src="../assets/img/project-2/process-1.webp" width="1941" height="1092" alt="Pixel-art tile map for the cave walls, annotated with corners, roof, floor, left and right walls, tight spaces and solid in-between blocks" loading="lazy"></button>
+            <figcaption>Tile map: the cave tile set, annotated with the pieces for corners, walls, roof, floor and tight spaces.</figcaption>
           </figure>
           <figure>
-            <img src="../assets/img/project-2/process-2.webp" width="1200" height="675" alt="[Describe: greybox]" loading="lazy">
-            <figcaption>[Caption]</figcaption>
-          </figure>
-          <figure>
-            <img src="../assets/img/project-2/process-3.webp" width="1200" height="675" alt="[Describe: design doc / diagram]" loading="lazy">
-            <figcaption>[Caption]</figcaption>
-          </figure>
-          <figure>
-            <img src="../assets/img/project-2/process-4.webp" width="1200" height="675" alt="[Describe: final iteration]" loading="lazy">
-            <figcaption>[Caption]</figcaption>
+            <button class="process-zoom" type="button" aria-label="View larger: The full level layout in the Unity editor: the ocean surface and kelp at the top, winding caves through the middle and the lava chamber at the bottom"><img src="../assets/img/project-2/process-2.webp" width="1467" height="825" alt="The full level layout in the Unity editor: the ocean surface and kelp at the top, winding caves through the middle and the lava chamber at the bottom" loading="lazy"></button>
+            <figcaption>Map layout: the whole level, from the surface and kelp forest down through the caves to the lava chamber.</figcaption>
           </figure>
         </div>
       </div>
@@ -181,12 +173,11 @@
         <div class="link-cards">
           <div class="link-card">
             <div class="qr">
-              <!-- <img src="../assets/img/project-2/qr-download.png" width="120" height="120" alt="QR code to itch.io download"> -->
-              <div class="placeholder placeholder--square">QR: download</div>
+              <img src="../assets/img/project-2/qr-download.svg" width="120" height="120" alt="QR code linking to Mariana’s Secret on itch.io">
             </div>
             <div>
               <h3>Play / download</h3>
-              <p><a href="https://callum-schultz.itch.io/project-2" rel="noopener">callum-schultz.itch.io/project-2</a></p>
+              <p><a href="https://tirttirt.itch.io/marianas-secret" rel="noopener">tirttirt.itch.io/marianas-secret</a></p>
             </div>
           </div>
         </div>
