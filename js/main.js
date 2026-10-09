@@ -256,16 +256,9 @@
     });
   });
 
-  // Click-to-play YouTube: swap in the real thumbnail when online, load the player only on click.
+  // Click-to-play YouTube: the player (and YouTube's scripts) only load on click.
   Array.prototype.forEach.call(document.querySelectorAll('[data-youtube]'), function (box) {
     var id = box.getAttribute('data-youtube');
-    var poster = box.querySelector('.video-lite__poster');
-    var thumb = new Image();
-    thumb.onload = function () {
-      // YouTube returns a 120px grey image when a max-res thumbnail doesn't exist; ignore that.
-      if (thumb.naturalWidth > 120 && poster) { poster.src = thumb.src; poster.classList.remove('is-fallback'); }
-    };
-    thumb.src = 'https://i.ytimg.com/vi/' + id + '/maxresdefault.jpg';
     box.querySelector('.video-lite__btn').addEventListener('click', function () {
       var frame = document.createElement('iframe');
       frame.src = 'https://www.youtube-nocookie.com/embed/' + id + '?autoplay=1&rel=0';
