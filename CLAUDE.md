@@ -75,6 +75,7 @@ Also: select 2–3 projects that suit the target role, and refine older work so 
 - [ ] Résumé PDF (none yet – all résumé links are commented out in the HTML; restore them once assets/resume/resume.pdf exists)
 - [ ] Chosen domain name (coming later)
 - [x] Bio (on About page; short version in home hero)
+- [x] Design reel: https://youtu.be/tSjWyc_RSl4 (click-to-play on home page)
 - [x] Visual identity: green accent (#4ade80), no logo mark (name only), greyscale blurred Garden Growers background. Achievement: Ludum Dare 57 – top 50 for Art Style (on About timeline)
 
 ## Working Notes
