@@ -376,6 +376,7 @@ body.has-hero { padding-top: 0; }
 
 .process-grid { display: grid; gap: 20px; grid-template-columns: repeat(auto-fill, minmax(min(100%, 260px), 1fr)); }
 .process-grid figure { margin: 0; }
+.process-zoom { display: block; width: 100%; padding: 0; border: 0; background: none; cursor: zoom-in; border-radius: var(--radius); }
 .process-grid figcaption { font-size: 0.88rem; color: var(--text-muted); margin-top: 8px; }
 
 .video-embed { position: relative; aspect-ratio: 16 / 9; background: var(--bg-sunken); border-radius: var(--radius); overflow: hidden; border: 1px solid var(--line); }

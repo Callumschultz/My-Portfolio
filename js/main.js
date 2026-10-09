@@ -242,6 +242,20 @@
     });
   });
 
+  // Process images: click any one to open the full-screen viewer for that project's process set.
+  Array.prototype.forEach.call(document.querySelectorAll('.process-grid'), function (grid) {
+    var buttons = Array.prototype.slice.call(grid.querySelectorAll('.process-zoom'));
+    var shots = buttons.map(function (b) {
+      var img = b.querySelector('img');
+      return { src: img.getAttribute('src'), alt: img.getAttribute('alt') };
+    });
+    buttons.forEach(function (b, i) {
+      b.addEventListener('click', function () {
+        if (typeof HTMLDialogElement === 'function') openLightbox(shots, i);
+      });
+    });
+  });
+
   var year = document.getElementById('year');
   if (year) year.textContent = new Date().getFullYear();
 })();
