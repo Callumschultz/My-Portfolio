@@ -14,6 +14,8 @@ Custom-coded portfolio website for **Callum Schultz**, a final-year game design 
 - LinkedIn: https://www.linkedin.com/in/callum-schultz-7b737137b/
 - itch.io: https://callum-schultz.itch.io/
 - GitHub: https://github.com/Callumschultz
+- Instagram: https://www.instagram.com/callumschultzz/
+- Availability: junior and graduate roles from December 2026
 
 ## Design Direction
 Inspired by these portfolios:
@@ -73,7 +75,7 @@ Also: select 2–3 projects that suit the target role, and refine older work so 
 - [ ] Résumé PDF (none yet – all résumé links are commented out in the HTML; restore them once assets/resume/resume.pdf exists)
 - [ ] Chosen domain name (coming later)
 - [x] Bio (on About page; short version in home hero)
-- [x] Visual identity: green accent (#4ade80), leaf logo, greyscale blurred Garden Growers background. Achievement: Ludum Dare 57 – top 50 for Art Style (on About timeline)
+- [x] Visual identity: green accent (#4ade80), no logo mark (name only), greyscale blurred Garden Growers background. Achievement: Ludum Dare 57 – top 50 for Art Style (on About timeline)
 
 ## Working Notes
 - This is an individually assessed project. Project write-ups should come from my own drafts; edit for clarity, spelling and grammar rather than rewriting my content.
