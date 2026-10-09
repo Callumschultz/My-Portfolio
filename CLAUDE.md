@@ -63,7 +63,7 @@ Also: select 2–3 projects that suit the target role, and refine older work so 
 
 ## Still To Provide
 - [ ] Projects (2–3) with images, videos, builds and write-ups
-  - Project 1: Garden Growers – https://kaellum.itch.io/garden-growers (hosted on a teammate's itch.io account; Callum's own account stays the contact link. Link + QR done; cover art + 2 gameplay screenshots + 5 asset renders (crow, tomato x2, lettuce, carrot) in gallery; write-up, poster, process, video still needed)
+  - Project 1: Garden Growers – https://kaellum.itch.io/garden-growers (hosted on a teammate's itch.io account; Callum's own account stays the contact link. Link + QR done; cover art + 2 gameplay screenshots + 6 asset renders (crow, tomato x2, lettuce, carrot, full line-up) in gallery; write-up, poster, process, video still needed)
   - Project 2: Mariana's Secret (cover art + 3 gameplay screenshots in gallery and home card; write-up, team names/poster, process, itch link, video still needed)
   - Project 3 (Personal): Coral Crossing by Plunder Studios (cover used as poster, home card and first gallery image; 3 model renders in gallery; write-up, team names, process, itch link, video still needed)
   - No gameplay videos exist yet, so each project page uses a screenshot gallery in #links (brief item g still wants a demo video)
