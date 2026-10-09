@@ -240,7 +240,8 @@ p { margin: 0 0 1em; }
 /* Home: fixed background layer – key art, watermark and hatch stay still while the page scrolls */
 body.has-hero { padding-top: 0; }
 .page-bg { position: fixed; inset: 0; z-index: -1; overflow: hidden; pointer-events: none; }
-.page-bg img { width: 100%; height: 100%; object-fit: cover; opacity: 0.3; filter: blur(2px) grayscale(0.4); transform: scale(1.04); }
+/* Image is already greyscale + blurred in the file (cheaper than a live CSS filter on an animated layer) */
+.page-bg img { width: 100%; height: 100%; object-fit: cover; opacity: 0.5; transform: scale(1.04); }
 .page-bg::after {
   content: ""; position: absolute; inset: 0;
   background: radial-gradient(ellipse at center, rgba(11, 13, 18, 0.35) 0%, rgba(11, 13, 18, 0.85) 65%, var(--bg) 100%);
